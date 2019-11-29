@@ -12,7 +12,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'xuhdev/vim-latex-live-preview'
     Plugin 'tpope/vim-repeat'
     Plugin 'tpope/vim-surround'
-    " TODO maybe add these 
+    " TODO set up for this
     " Plugin 'svermeulen/vim-cutlass'
     " Plugin 'svermeulen/vim-subversive'
     " Plugin 'svermeulen/vim-yoink'
@@ -22,7 +22,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'Vimjas/vim-python-pep8-indent'
     Plugin 'christoomey/vim-sort-motion'
     Plugin 'tmhedberg/SimpylFold'
-    Plugin 'antoniobarbalau/vim_tonio_latex'
+    " Plugin 'antoniobarbalau/vim_tonio_latex'
     Plugin 'numirias/semshi' ", {'do': ':UpdateRemotePlugs'}
 call vundle#end()
 filetype plugin indent on
