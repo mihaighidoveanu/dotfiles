@@ -65,6 +65,7 @@ ZSH_THEME="dracula"
 plugins=(
   git
   tmux
+  pyenv
 )
 
 source $ZSH/oh-my-zsh.sh
