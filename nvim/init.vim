@@ -2,9 +2,9 @@ filetype off
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle')
     Plugin 'VundleVim/Vundle.vim'
-    " Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
-    " Plugin 'zchee/deoplete-jedi'
-    " Plugin 'trevordmiller/nova-vim'
+    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
+    Plugin 'zchee/deoplete-jedi'
+    Plugin 'trevordmiller/nova-vim'
     Plugin 'scrooloose/nerdtree'
     Plugin 'majutsushi/tagbar'
     Plugin 'flazz/vim-colorschemes'
@@ -13,7 +13,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'tpope/vim-repeat'
     Plugin 'tpope/vim-surround'
     " TODO set up for this
-    " Plugin 'svermeulen/vim-cutlass'
+    Plugin 'svermeulen/vim-cutlass'
     " Plugin 'svermeulen/vim-subversive'
     " Plugin 'svermeulen/vim-yoink'
     Plugin 'tpope/vim-commentary'
@@ -24,6 +24,10 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'tmhedberg/SimpylFold'
     " Plugin 'antoniobarbalau/vim_tonio_latex'
     Plugin 'numirias/semshi' ", {'do': ':UpdateRemotePlugs'}
+    Plugin 'jiangmiao/auto-pairs'
+    Plugin 'ervandew/supertab'
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
 call vundle#end()
 filetype plugin indent on
 
@@ -75,8 +79,6 @@ map mn :normal! mN<cr>
 map `n :normal! `Nzt<cr>
 map gg :normal! mNgg<cr>
 map G :normal! mNG<cr>
-
-colorscheme dracula
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
 nmap ' :NERDTreeToggle<cr>
@@ -168,3 +170,18 @@ fun! ToggleClassJumpMode()
     return ""
 endfun
 map <leader>c :call ToggleClassJumpMode()<cr>
+
+"" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:ycm_global_ycm_extra_conf = "/home/bob/.config/nvim/bundle/YouCompleteMe/.ycm_extra_conf.py"
