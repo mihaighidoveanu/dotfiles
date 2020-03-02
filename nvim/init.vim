@@ -185,3 +185,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 let g:ycm_global_ycm_extra_conf = "/home/bob/.config/nvim/bundle/YouCompleteMe/.ycm_extra_conf.py"
+
+nnoremap x d
+xnoremap x d
+
+nnoremap xx dd
+nnoremap X D
